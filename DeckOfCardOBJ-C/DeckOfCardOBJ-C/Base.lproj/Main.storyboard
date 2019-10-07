@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Card View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MVDCardViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CLj-hC-9se">
+                                <rect key="frame" x="40.5" y="203" width="333" height="500"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="500" id="Ef1-Oo-UIn"/>
+                                    <constraint firstAttribute="width" secondItem="CLj-hC-9se" secondAttribute="height" multiplier="2:3" id="TCA-TP-ylX"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cDX-Yr-KEZ">
+                                <rect key="frame" x="186" y="162" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="59n-BV-kHL">
+                                <rect key="frame" x="153.5" y="723" width="107" height="30"/>
+                                <state key="normal" title="Draw New Card">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="drawNewButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GgS-Us-w2g"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="CLj-hC-9se" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="FmI-he-Udd"/>
+                            <constraint firstItem="CLj-hC-9se" firstAttribute="top" secondItem="cDX-Yr-KEZ" secondAttribute="bottom" constant="20" id="TWc-tD-lAv"/>
+                            <constraint firstItem="59n-BV-kHL" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="WKp-1Y-uu8"/>
+                            <constraint firstItem="cDX-Yr-KEZ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="aXr-kA-Mso"/>
+                            <constraint firstItem="59n-BV-kHL" firstAttribute="top" secondItem="CLj-hC-9se" secondAttribute="bottom" constant="20" id="nau-OT-sf2"/>
+                            <constraint firstItem="CLj-hC-9se" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="tXR-pw-W36"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cardImageView" destination="CLj-hC-9se" id="IAL-FB-fLj"/>
+                        <outlet property="suitLabel" destination="cDX-Yr-KEZ" id="VdP-d0-T2z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133" y="139"/>
+        </scene>
+    </scenes>
+</document>
